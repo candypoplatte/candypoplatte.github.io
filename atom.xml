@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>CandyPopLatte의 공부하는 블로그</title>
+  <title>CandyPopLatte&#39;s Blog</title>
   
-  <subtitle>CandyPopLatte&#39;s studying blog</subtitle>
+  <subtitle>CandyPopLatte&#39;s blog for studying</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://candypoplatte.github.io/"/>
