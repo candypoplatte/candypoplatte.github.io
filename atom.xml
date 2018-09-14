@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>CandyPopLatte&#39;s Blog</title>
+  <title>CandyPopLatte</title>
   
   <subtitle>CandyPopLatte&#39;s blog for studying</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://candypoplatte.github.io/"/>
-  <updated>2018-08-20T06:20:45.241Z</updated>
+  <updated>2018-09-14T19:16:04.008Z</updated>
   <id>https://candypoplatte.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://candypoplatte.github.io/2018/09/15/book/"/>
+    <id>https://candypoplatte.github.io/2018/09/15/book/</id>
+    <published>2018-09-14T19:16:00.873Z</published>
+    <updated>2018-09-14T19:16:04.008Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="책-읽기"><a href="#책-읽기" class="headerlink" title="책 읽기"></a>책 읽기</h1><p>나는 책을 (사는 것을) 좋아하고, 이제 <a href="[독서 List - Google 스프레드시트](https://docs.google.com/spreadsheets/d/1gMSJ3K8oxCkwpjRNwWaUo2nTQVvc8dsrARwb6yjarQs/edit#gid=0">독서 관리 Sheet</a>)) 에서 독서 습관을 관리하려고 한다.</p><h3 id="내가-책을-읽는-이유"><a href="#내가-책을-읽는-이유" class="headerlink" title="내가 책을 읽는 이유"></a>내가 책을 읽는 이유</h3><p>내가 부족한 역량에 대한 도움을 받으려고 책을 읽는다.<br>부족한 부분이 명확하지 않아서 많이 사게되는 경향도 있다.</p><p>대부분은 아래 Category 안에서 고르는 편이다.<br>(내가 항상 부족하다고 느끼는 역량들)</p><ul><li>논리적 생각</li><li>사람에 대한 이해</li><li>글쓰기</li><li>세상/시대의 흐름 파악</li><li>기술</li><li>흥미</li></ul><h3 id="독서-관리-Sheet가-필요한-이유"><a href="#독서-관리-Sheet가-필요한-이유" class="headerlink" title="독서 관리 Sheet가 필요한 이유"></a>독서 관리 Sheet가 필요한 이유</h3><blockquote><p>많이 사야 많이 본다. - 우아한형제들 김봉진</p></blockquote><p>“책을 많이 사야 많이 보겠지”하는 생각에 조금이라도 읽고 싶은 책은 바로 산다.<br>그러다보니 사놓고 (혹은 빌리고) 안 읽은 책이 너무 많다.</p><p>Google Sheet로 나의 독서 습관을 관리해보려고 한다.<br>(<a href="[독서 List - Google 스프레드시트](https://docs.google.com/spreadsheets/d/1gMSJ3K8oxCkwpjRNwWaUo2nTQVvc8dsrARwb6yjarQs/edit#gid=0">독서 관리 Sheet</a>))<br>Sheet로 정리해보니 읽을 책이 얼마나 남았는지 한 눈에 보여서 만족스럽다.</p><h3 id="목표"><a href="#목표" class="headerlink" title="목표"></a>목표</h3><p><a href="[독서 List - Google 스프레드시트](https://docs.google.com/spreadsheets/d/1gMSJ3K8oxCkwpjRNwWaUo2nTQVvc8dsrARwb6yjarQs/edit#gid=0">독서 관리 Sheet</a>) 목록의 50% 이상 읽는 것.<br>조금씩 내 생각을 만들어 가는 것.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;책-읽기&quot;&gt;&lt;a href=&quot;#책-읽기&quot; class=&quot;headerlink&quot; title=&quot;책 읽기&quot;&gt;&lt;/a&gt;책 읽기&lt;/h1&gt;&lt;p&gt;나는 책을 (사는 것을) 좋아하고, 이제 &lt;a href=&quot;[독서 List - Google 스프레드시트](http
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>README 파일 작성하는 방법</title>
