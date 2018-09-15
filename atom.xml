@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://candypoplatte.github.io/"/>
-  <updated>2018-09-14T19:47:28.022Z</updated>
+  <updated>2018-09-15T04:33:33.668Z</updated>
   <id>https://candypoplatte.github.io/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="https://candypoplatte.github.io/2018/09/15/book/"/>
     <id>https://candypoplatte.github.io/2018/09/15/book/</id>
     <published>2018-09-14T19:16:00.873Z</published>
-    <updated>2018-09-14T19:47:28.022Z</updated>
+    <updated>2018-09-15T04:33:33.668Z</updated>
     
-    <content type="html"><![CDATA[<p>나는 책을 (사는 것을) 좋아하고, 이제 <a href="https://docs.google.com/spreadsheets/d/1gMSJ3K8oxCkwpjRNwWaUo2nTQVvc8dsrARwb6yjarQs/edit#gid=0" target="_blank" rel="external">독서 관리 Sheet</a>로 독서 습관을 관리하려고 한다.</p><h2 id="내가-책을-읽는-이유"><a href="#내가-책을-읽는-이유" class="headerlink" title="내가 책을 읽는 이유"></a>내가 책을 읽는 이유</h2><p>내가 <strong>부족한 역량에 대한 도움을 받으려고</strong> 책을 읽는다.<br>부족한 부분이 명확하지 않아서 책을 많이 사게 되는 경향도 있다.</p><p>책을 살 때는 대부분 아래 Category 안에서 고르는 편이다.<br>(내가 항상 부족하다고 느끼는 역량들)</p><ul><li>논리적 생각</li><li>사람에 대한 이해</li><li>글쓰기</li><li>세상/시대의 흐름 파악</li><li>기술</li><li>흥미</li></ul><h2 id="내게-독서-관리-Sheet가-필요한-이유"><a href="#내게-독서-관리-Sheet가-필요한-이유" class="headerlink" title="내게 독서 관리 Sheet가 필요한 이유"></a>내게 <a href="https://docs.google.com/spreadsheets/d/1gMSJ3K8oxCkwpjRNwWaUo2nTQVvc8dsrARwb6yjarQs/edit#gid=0" target="_blank" rel="external">독서 관리 Sheet</a>가 필요한 이유</h2><blockquote><p>많이 사야 많이 본다. - 우아한형제들 김봉진</p></blockquote><p>나는 “책을 많이 사야 많이 보겠지”하는 생각에 조금이라도 읽고 싶은 책은 바로 산다.<br>그러다 보니 사놓고 (혹은 빌리고) 안 읽은 책이 너무 많아졌다.</p><p>그래서 Google Sheet로 내 독서 습관을 관리하기로 결정했다. (<strong><a href="https://docs.google.com/spreadsheets/d/1gMSJ3K8oxCkwpjRNwWaUo2nTQVvc8dsrARwb6yjarQs/edit#gid=0" target="_blank" rel="external">독서 관리 Sheet</a></strong>)<br>Sheet로 정리해보니 읽을 책이 얼마나 남았는지 한눈에 보여서 일단 만족스럽다.</p><h2 id="목표"><a href="#목표" class="headerlink" title="목표"></a>목표</h2><p>올해가 가기 전에 <a href="https://docs.google.com/spreadsheets/d/1gMSJ3K8oxCkwpjRNwWaUo2nTQVvc8dsrARwb6yjarQs/edit#gid=0" target="_blank" rel="external">독서 관리 Sheet</a> 목록의 50% 이상 읽기.<br>각각의 책이 나에게 어떤 도움이 되었는지 생각해보기.<br>나도 조금씩 내 생각을 만들어 가기.</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="들어가며"><a href="#들어가며" class="headerlink" title="들어가며"></a>들어가며</h2><p>나는 <strong>책</strong>을 사고 읽기를 좋아한다.<br>하지만 <strong>정리되지 않은 독서 습관</strong>이 나의 시간을 낭비하고 있다는 생각이 들었다.<br>그래서 <strong>책을 읽는 목적</strong>을 다시 정리해보았고, 얼마전부터 <a href="https://docs.google.com/spreadsheets/d/1gMSJ3K8oxCkwpjRNwWaUo2nTQVvc8dsrARwb6yjarQs/edit#gid=0" target="_blank" rel="external">Google Sheet</a>로 <strong>독서 습관을 관리</strong>하기 시작했다.</p><h2 id="내가-책을-읽는-이유"><a href="#내가-책을-읽는-이유" class="headerlink" title="내가 책을 읽는 이유"></a>내가 책을 읽는 이유</h2><p><strong>부족한 역량에 대해 도움을 받으려고</strong> 책을 읽는다. (아직 부족한 부분이 명확하지 않아서 책을 많이 사게 되는 경향도 있다.)</p><p>책을 살 때는 대부분 아래 Category 안에서 고르는 편이다. (항상 부족하다고 느끼는 역량들)</p><ul><li>논리적 생각</li><li>사람에 대한 이해</li><li>글쓰기</li><li>세상/시대의 흐름 파악</li><li>기술</li><li>흥미</li></ul><h2 id="내게-독서-관리-Sheet가-필요한-이유"><a href="#내게-독서-관리-Sheet가-필요한-이유" class="headerlink" title="내게 독서 관리 Sheet가 필요한 이유"></a>내게 <a href="https://docs.google.com/spreadsheets/d/1gMSJ3K8oxCkwpjRNwWaUo2nTQVvc8dsrARwb6yjarQs/edit#gid=0" target="_blank" rel="external">독서 관리 Sheet</a>가 필요한 이유</h2><blockquote><p>많이 사야 많이 본다. - 우아한형제들 김봉진</p></blockquote><p>나는 <strong>“책을 많이 사야 많이 보겠지”</strong>하는 생각에 조금이라도 읽고 싶은 책은 바로 산다.<br>그러다 보니 사놓고 (혹은 구해놓고) <strong>안 읽는 책</strong>이 너무 많아졌다.</p><p>그래서 <strong><a href="https://docs.google.com/spreadsheets/d/1gMSJ3K8oxCkwpjRNwWaUo2nTQVvc8dsrARwb6yjarQs/edit#gid=0" target="_blank" rel="external">독서 관리 Sheet</a>로 내 독서 습관을 관리</strong>하기로 결정했다. (Sheet로 정리해보니 읽을 책이 얼마나 남았는지 한눈에 보여서 일단 만족스럽다.)</p><p><a href="https://docs.google.com/spreadsheets/d/1gMSJ3K8oxCkwpjRNwWaUo2nTQVvc8dsrARwb6yjarQs/edit#gid=0" target="_blank" rel="external">독서 관리 Sheet</a>에서는 아래의 4가지 항목을 간략하게 정리한다.</p><ul><li>어떤 책인가 (이름, 저자)</li><li>왜 샀는가 (읽고 싶은 이유)</li><li>읽었는가</li><li>어땠는가</li></ul><h2 id="목표"><a href="#목표" class="headerlink" title="목표"></a>목표</h2><ol><li>올해가 가기 전에 <a href="https://docs.google.com/spreadsheets/d/1gMSJ3K8oxCkwpjRNwWaUo2nTQVvc8dsrARwb6yjarQs/edit#gid=0" target="_blank" rel="external">독서 관리 Sheet</a> 목록의 50% 이상 읽기.  </li><li>각각의 책이 나에게 어떤 도움이 되었는지 생각해보기.  </li><li>나도 조금씩 내 생각을 만들어 가기.</li></ol>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;나는 책을 (사는 것을) 좋아하고, 이제 &lt;a href=&quot;https://docs.google.com/spreadsheets/d/1gMSJ3K8oxCkwpjRNwWaUo2nTQVvc8dsrARwb6yjarQs/edit#gid=0&quot; target=&quot;_
+        &lt;h2 id=&quot;들어가며&quot;&gt;&lt;a href=&quot;#들어가며&quot; class=&quot;headerlink&quot; title=&quot;들어가며&quot;&gt;&lt;/a&gt;들어가며&lt;/h2&gt;&lt;p&gt;나는 &lt;strong&gt;책&lt;/strong&gt;을 사고 읽기를 좋아한다.&lt;br&gt;하지만 &lt;strong&gt;정리되지 않은 독서 
       
     
     </summary>
