@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://candypoplatte.github.io/"/>
-  <updated>2018-09-15T04:33:33.668Z</updated>
+  <updated>2018-09-16T14:14:40.399Z</updated>
   <id>https://candypoplatte.github.io/</id>
   
   <author>
@@ -17,11 +17,25 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>책 읽기</title>
+    <title></title>
+    <link href="https://candypoplatte.github.io/2018/09/16/django_coding_style/"/>
+    <id>https://candypoplatte.github.io/2018/09/16/django_coding_style/</id>
+    <published>2018-09-16T14:14:40.399Z</published>
+    <updated>2018-09-16T14:14:40.399Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>책 읽는 습관</title>
     <link href="https://candypoplatte.github.io/2018/09/15/book/"/>
     <id>https://candypoplatte.github.io/2018/09/15/book/</id>
     <published>2018-09-14T19:16:00.873Z</published>
-    <updated>2018-09-15T04:33:33.668Z</updated>
+    <updated>2018-09-16T14:20:39.023Z</updated>
     
     <summary type="html">
     

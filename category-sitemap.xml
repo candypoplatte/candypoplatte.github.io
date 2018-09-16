@@ -7,13 +7,6 @@
     </url>
 
     <url>
-        <loc>https://candypoplatte.github.io/categories/hwang/</loc>
-        <lastmod>2018-09-15T04:33:33.668Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://candypoplatte.github.io/categories/development/</loc>
         <lastmod>2018-09-16T14:04:59.507Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -23,6 +16,13 @@
     <url>
         <loc>https://candypoplatte.github.io/categories/development/course/</loc>
         <lastmod>2018-09-16T14:04:59.507Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://candypoplatte.github.io/categories/hwang/</loc>
+        <lastmod>2018-09-16T14:20:39.023Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
