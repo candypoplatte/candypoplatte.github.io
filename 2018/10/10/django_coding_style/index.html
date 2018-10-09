@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112450381-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-112450381-1');
+    </script>
+    <meta name="naver-site-verification" content="00d91af50556947fd77de13fcc1df001f94b455b" />
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Django 공식 문서의 “Django Coding Style” 문서를 번역한 글  Django에서 권장하는 코딩 스타일 가이드를 정리해보았다. (부끄러운 얘기지만 1년넘게 Django를 사용하면서 이 문서 전체를 읽어본 적은 없었다.)   코딩 스타일을 지키는 것이 중요한 가장 큰 이유는 다른 사람(혹은 미래의 나)과의 협업에 용이하기 때문이다. 공통">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Django Coding Style">
+<meta property="og:url" content="https://candypoplatte.github.io/2018/10/10/django_coding_style/index.html">
+<meta property="og:site_name" content="CandyPopLatte">
+<meta property="og:description" content="Django 공식 문서의 “Django Coding Style” 문서를 번역한 글  Django에서 권장하는 코딩 스타일 가이드를 정리해보았다. (부끄러운 얘기지만 1년넘게 Django를 사용하면서 이 문서 전체를 읽어본 적은 없었다.)   코딩 스타일을 지키는 것이 중요한 가장 큰 이유는 다른 사람(혹은 미래의 나)과의 협업에 용이하기 때문이다. 공통">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-10-09T17:11:38.876Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Django Coding Style">
+<meta name="twitter:description" content="Django 공식 문서의 “Django Coding Style” 문서를 번역한 글  Django에서 권장하는 코딩 스타일 가이드를 정리해보았다. (부끄러운 얘기지만 1년넘게 Django를 사용하면서 이 문서 전체를 읽어본 적은 없었다.)   코딩 스타일을 지키는 것이 중요한 가장 큰 이유는 다른 사람(혹은 미래의 나)과의 협업에 용이하기 때문이다. 공통">
+    
+    <link rel="canonical" href="https://candypoplatte.github.io/2018/10/10/django_coding_style/"/>
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Django Coding Style</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://github.com/candypoplatte">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2018/09/15/book/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://candypoplatte.github.io/2018/10/10/django_coding_style/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://candypoplatte.github.io/2018/10/10/django_coding_style/&text=Django Coding Style"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://candypoplatte.github.io/2018/10/10/django_coding_style/&title=Django Coding Style"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://candypoplatte.github.io/2018/10/10/django_coding_style/&is_video=false&description=Django Coding Style"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Django Coding Style&body=Check out this article: https://candypoplatte.github.io/2018/10/10/django_coding_style/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://candypoplatte.github.io/2018/10/10/django_coding_style/&title=Django Coding Style"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://candypoplatte.github.io/2018/10/10/django_coding_style/&title=Django Coding Style"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://candypoplatte.github.io/2018/10/10/django_coding_style/&title=Django Coding Style"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://candypoplatte.github.io/2018/10/10/django_coding_style/&title=Django Coding Style"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://candypoplatte.github.io/2018/10/10/django_coding_style/&name=Django Coding Style&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#목차"><span class="toc-number">1.</span> <span class="toc-text">목차</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Python-Style"><span class="toc-number">2.</span> <span class="toc-text">1. Python Style</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-PEP-8"><span class="toc-number">2.1.</span> <span class="toc-text">1-1. PEP 8</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-Indentation-들여쓰기"><span class="toc-number">2.2.</span> <span class="toc-text">1-2. Indentation (들여쓰기)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-Quote-따옴표"><span class="toc-number">2.3.</span> <span class="toc-text">1-3. Quote (따옴표)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-Comment-주석"><span class="toc-number">2.4.</span> <span class="toc-text">1-4. Comment (주석)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-Naming-이름짓기"><span class="toc-number">2.5.</span> <span class="toc-text">1-5. Naming (이름짓기)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-6-DocString"><span class="toc-number">2.6.</span> <span class="toc-text">1-6. DocString</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-7-Test"><span class="toc-number">2.7.</span> <span class="toc-text">1-7. Test</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Imports"><span class="toc-number">3.</span> <span class="toc-text">2. Imports</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-자동-Sorting"><span class="toc-number">3.1.</span> <span class="toc-text">2-1. 자동 Sorting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-작성-순서"><span class="toc-number">3.2.</span> <span class="toc-text">2-2. 작성 순서</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-Indentation-Blank-Line-들여쓰기-줄-공백"><span class="toc-number">3.3.</span> <span class="toc-text">2-3. Indentation / Blank Line (들여쓰기 / 줄 공백)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Template"><span class="toc-number">4.</span> <span class="toc-text">3. Template</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-Spaces"><span class="toc-number">4.1.</span> <span class="toc-text">3-1. Spaces</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-View"><span class="toc-number">5.</span> <span class="toc-text">4. View</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-Request-Parameter"><span class="toc-number">5.1.</span> <span class="toc-text">4-1. Request Parameter</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Model"><span class="toc-number">6.</span> <span class="toc-text">5. Model</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-Naming-이름-짓기"><span class="toc-number">6.1.</span> <span class="toc-text">5-1. Naming (이름 짓기)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-순서"><span class="toc-number">6.2.</span> <span class="toc-text">5-2. 순서</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-Choices"><span class="toc-number">6.3.</span> <span class="toc-text">5-3. Choices</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-django-conf-settings-사용"><span class="toc-number">7.</span> <span class="toc-text">6. django.conf.settings 사용</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-기타"><span class="toc-number">8.</span> <span class="toc-text">7. 기타</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Django Coding Style
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">CandyPopLatte</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-10-09T17:04:49.354Z" itemprop="datePublished">2018-10-10</time>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <blockquote>
+<p>Django 공식 문서의 <a href="https://docs.djangoproject.com/en/1.11/internals/contributing/writing-code/coding-style/" target="_blank" rel="external">“Django Coding Style”</a> 문서를 번역한 글</p>
+</blockquote>
+<p><strong>Django에서 권장하는 코딩 스타일 가이드</strong>를 정리해보았다. (부끄러운 얘기지만 1년넘게 Django를 사용하면서 이 문서 전체를 읽어본 적은 없었다.)  </p>
+<p>코딩 스타일을 지키는 것이 중요한 가장 큰 <strong>이유</strong>는 <strong>다른 사람(혹은 미래의 나)과의 협업에 용이</strong>하기 때문이다. 공통 Rule이 있기 때문에 불필요한 논쟁을 줄여주고, 코드가 명확한 의미를 표현하도록 권장하므로 다른 사람의 코드를 읽고, 유지 보수하기도 쉽다.</p>
+<p>정리하면서 <strong>“왜 이렇게 정했을까?”</strong>를 질문하고 고민해보고 찾아보니 대부분 이유가 있었다. 이 글을 읽는 분들도 각 항목에 대해 이유를 생각하면서 읽어보면 더 재미있을 것이다.</p>
+<h2 id="목차"><a href="#목차" class="headerlink" title="목차"></a>목차</h2><p><a href="#1-Python-Style">1. Python Style</a><br><a href="#2-Imports">2. Imports</a><br><a href="#3-Template">3. Template</a><br><a href="#4-View">4. View</a><br><a href="#5-Model">5. Model</a><br><a href="#6-django-conf-settings-사용">6. django.conf.settings 사용</a><br><a href="#7-기타">7. 기타</a></p>
+<h2 id="1-Python-Style"><a href="#1-Python-Style" class="headerlink" title="1. Python Style"></a>1. Python Style</h2><h3 id="1-1-PEP-8"><a href="#1-1-PEP-8" class="headerlink" title="1-1. PEP 8"></a>1-1. PEP 8</h3><ul>
+<li>웬만하면 <a href="https://www.python.org/dev/peps/pep-0008" target="_blank" rel="external">PEP8</a>을 따름</li>
+<li><a href="https://github.com/PyCQA/flake8" target="_blank" rel="external">Flake8</a> Plugin 사용 (<code>setup.cfg</code>)</li>
+<li>한 줄에 허용되는 글자 수는 예외를 둠<ul>
+<li><strong>코드</strong> : <strong>119자</strong> (GitHub Code Review의 너비)</li>
+<li>주석, Docstrings : 79자</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-2-Indentation-들여쓰기"><a href="#1-2-Indentation-들여쓰기" class="headerlink" title="1-2. Indentation (들여쓰기)"></a>1-2. Indentation (들여쓰기)</h3><ul>
+<li><a href="https://editorconfig.org/" target="_blank" rel="external">EditorConfig</a>를 지원하는 Editor를 사용 (<code>.editorconfig</code>에 들여쓰기 규칙을 명세)</li>
+<li><strong>공백 수</strong><ul>
+<li>Python : 공백 4개</li>
+<li>HTML : 공백 2개</li>
+</ul>
+</li>
+<li>코드 라인이 길어질 경우, <strong>수직 정렬 대신 공백 4개로 들여쓰기</strong><ul>
+<li>장점 : 첫 번째 줄의 길이가 변경되어도 아래의 문자열을 다시 정렬할 필요가 없음<br><div></div><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># NO</span></span><br><span class="line"><span class="keyword">raise</span> AttributeError(<span class="string">'Here is a multine error message '</span>  <span class="comment"># 이 줄의 길이가 변경되면 아래 줄을 다시 정렬해야 함</span></span><br><span class="line">                     <span class="string">'shortened for clarity.'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># YES</span></span><br><span class="line"><span class="keyword">raise</span> AttributeError(</span><br><span class="line">    <span class="string">'Here is a multine error message '</span></span><br><span class="line">    <span class="string">'shortened for clarity.'</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-3-Quote-따옴표"><a href="#1-3-Quote-따옴표" class="headerlink" title="1-3. Quote (따옴표)"></a>1-3. Quote (따옴표)</h3><ul>
+<li><strong>단따옴표</strong>(<code>&#39;</code>) 사용 </li>
+<li>문자열이 단따옴표를 포함하는 경우에만 쌍따옴표(<code>“</code>) 사용</li>
+</ul>
+<h3 id="1-4-Comment-주석"><a href="#1-4-Comment-주석" class="headerlink" title="1-4. Comment (주석)"></a>1-4. Comment (주석)</h3><ul>
+<li><p>주석에는 “우리가(We)” 라는 말은 쓰지 않음 (영미권)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># NO</span></span><br><span class="line"><span class="comment"># We loop over</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># YES</span></span><br><span class="line"><span class="comment"># Loop over</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="1-5-Naming-이름짓기"><a href="#1-5-Naming-이름짓기" class="headerlink" title="1-5. Naming (이름짓기)"></a>1-5. Naming (이름짓기)</h3><ul>
+<li><p><strong>Variable, Function, Method</strong>의 이름은 <strong>underscore</strong>로 작성 (camelCase X)<br><div></div></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># NO</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getUniqueVoters</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># YES</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_unique_voters</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Class</strong> 혹은 Class를 반환하는 Factory Function의 이름은 <strong>첫 글자를 대문자로</strong> 함 (InitialCaps)<br><div></div></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># NO</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">blog_writer</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># YES</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BlogWriter</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="1-6-DocString"><a href="#1-6-DocString" class="headerlink" title="1-6. DocString"></a>1-6. DocString</h3><ul>
+<li>DocString은 <a href="https://www.python.org/dev/peps/pep-0257" target="_blank" rel="external">PEP 257</a>을 따름</li>
+</ul>
+<h3 id="1-7-Test"><a href="#1-7-Test" class="headerlink" title="1-7. Test"></a>1-7. Test</h3><ul>
+<li><code>assertRaises()</code> 보다 <code>assertRaisesMessage()</code>를 사용. (예외 메시지를 확인)<ul>
+<li>Regular Expression Matching이 필요한 경우에는 <code>assertRaisesRegex()</code> 사용</li>
+</ul>
+</li>
+<li>Docstring에는 <strong>명확하게 예상되는 행동</strong>을 적음<ul>
+<li>예) <code>사용자 추가 후 비밀번호 일치 확인</code></li>
+<li>“이러이러한 Test”, “이러이러한 것을 보증하는” 등의 서문 금지</li>
+<li>명확한 표현이 어려울 때는 Issue Number로 대체<br><div></div><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_new_user_same_pw</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    사용자 추가 후 비밀번호 일치 확인 (#SYS-123).</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    ...</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-Imports"><a href="#2-Imports" class="headerlink" title="2. Imports"></a>2. Imports</h2><h3 id="2-1-자동-Sorting"><a href="#2-1-자동-Sorting" class="headerlink" title="2-1. 자동 Sorting"></a>2-1. 자동 Sorting</h3><ul>
+<li><a href="https://github.com/timothycrosley/isort#readme" target="_blank" rel="external">isort</a>와 같은 plugin을 사용</li>
+<li>주석으로 skip 가능<br><div></div><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> module  <span class="comment"># isort:skip</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="2-2-작성-순서"><a href="#2-2-작성-순서" class="headerlink" title="2-2. 작성 순서"></a>2-2. 작성 순서</h3><ul>
+<li><strong>Import Group 작성 순서</strong><ol>
+<li>Standard libraries</li>
+<li>Third-party libraries</li>
+<li>Django components : <em>Absolute imports</em></li>
+<li>Local Django components : <em>(Explicit) Relative imports</em></li>
+<li>try/excepts</li>
+</ol>
+</li>
+<li><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># future</span></span><br><span class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> unicode_literals</span><br><span class="line"></span><br><span class="line"><span class="comment"># 1. Standard libraries</span></span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">from</span> itertools <span class="keyword">import</span> chain</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. Third-party libraries</span></span><br><span class="line"><span class="keyword">import</span> bcrypt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. Django components</span></span><br><span class="line"><span class="keyword">from</span> django.http <span class="keyword">import</span> Http404</span><br><span class="line"><span class="keyword">from</span> django.http.response <span class="keyword">import</span> (</span><br><span class="line">    Http404, HttpResponse, HttpResponseNotAllowed, StreamingHttpResponse,</span><br><span class="line">    cookie,</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4. Local Django components</span></span><br><span class="line"><span class="keyword">from</span> .models <span class="keyword">import</span> LogEntry</span><br><span class="line"></span><br><span class="line"><span class="comment"># 5. try/excepts</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="keyword">import</span> yaml</span><br><span class="line"><span class="keyword">except</span> ImportError:</span><br><span class="line">    yaml = <span class="keyword">None</span></span><br><span class="line"></span><br><span class="line">CONSTANT = <span class="string">'foo'</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Example</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="comment"># ...</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Object Import 전에 Module을 Import</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> module </span><br><span class="line"><span class="keyword">from</span> module <span class="keyword">import</span> object</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>각 행은 Alphabet 순으로, 대문자가 먼저 오도록 정렬</p>
+</li>
+</ul>
+<h3 id="2-3-Indentation-Blank-Line-들여쓰기-줄-공백"><a href="#2-3-Indentation-Blank-Line-들여쓰기-줄-공백" class="headerlink" title="2-3. Indentation / Blank Line (들여쓰기 / 줄 공백)"></a>2-3. Indentation / Blank Line (들여쓰기 / 줄 공백)</h3><p><em>Indentation</em></p>
+<ul>
+<li>줄이 길어지면 <strong>Line Breaking 후 들여쓰기</strong></li>
+<li><strong>마지막 Import</strong>뒤에도 Comma는 포함</li>
+<li>마지막 닫는 괄호가 있는 Line에는 <strong>괄호만</strong> 존재하도록<br><div></div><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.http.response <span class="keyword">import</span> (</span><br><span class="line">    Http404, HttpResponse, HttpResponseNotAllowed, StreamingHttpResponse,  <span class="comment"># Line Breaking 후 공백 4개로 들여쓰기</span></span><br><span class="line">    cookie,  <span class="comment"># 마지막 Import 뒤에도 Comma 포함</span></span><br><span class="line">)  <span class="comment"># 닫는 괄호가 있는 줄에는 괄호만 존재</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><em>Blank Line</em></p>
+<ul>
+<li><strong>1줄</strong> 공백 : <strong>Import Group</strong> 간</li>
+<li><strong>2줄</strong> 공백 : 마지막 Import와 <strong>첫 Function/Class</strong> 간<br><div></div><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="comment"># --------- 1줄 공백</span></span><br><span class="line"><span class="keyword">from</span> django.http.response <span class="keyword">import</span> (</span><br><span class="line">  Http404, HttpResponse, HttpResponseNotAllowed, StreamingHttpResponse,</span><br><span class="line">  cookie,</span><br><span class="line">)</span><br><span class="line"><span class="comment"># --------- 2줄 공백</span></span><br><span class="line"><span class="comment"># --------- 2줄 공백</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Example</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="3-Template"><a href="#3-Template" class="headerlink" title="3. Template"></a>3. Template</h2><h3 id="3-1-Spaces"><a href="#3-1-Spaces" class="headerlink" title="3-1. Spaces"></a>3-1. Spaces</h3><ul>
+<li>중괄호와 Tag Content 사이에는 <strong>1개 Space</strong> 만 둠<br><div></div><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- NO --&gt;</span></span><br><span class="line">&#123;&#123;var&#125;&#125;</span><br><span class="line">&#123;&#123;  var  &#125;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- YES --&gt;</span></span><br><span class="line">&#123;&#123; var &#125;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="4-View"><a href="#4-View" class="headerlink" title="4. View"></a>4. View</h2><h3 id="4-1-Request-Parameter"><a href="#4-1-Request-Parameter" class="headerlink" title="4-1. Request Parameter"></a>4-1. Request Parameter</h3><ul>
+<li>View Function의 첫 번째 Parameter의 이름은 <code>request</code>를 권장<br><div></div><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># NO</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">my_view</span><span class="params">(req, foo)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># YES</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">my_view</span><span class="params">(request, foo)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="5-Model"><a href="#5-Model" class="headerlink" title="5. Model"></a>5. Model</h2><h3 id="5-1-Naming-이름-짓기"><a href="#5-1-Naming-이름-짓기" class="headerlink" title="5-1. Naming (이름 짓기)"></a>5-1. Naming (이름 짓기)</h3><ul>
+<li>Field 이름은 <strong>underscore</strong> 로 지음<br><div></div><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># NO</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span><span class="params">(models.Model)</span>:</span></span><br><span class="line">    FirstName = models.CharField(max_length=<span class="number">20</span>)</span><br><span class="line">    Last_Name = models.CharField(max_length=<span class="number">40</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># YES</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span><span class="params">(models.Model)</span>:</span></span><br><span class="line">    first_name = models.CharField(max_length=<span class="number">20</span>)</span><br><span class="line">    last_name = models.CharField(max_length=<span class="number">40</span>)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="5-2-순서"><a href="#5-2-순서" class="headerlink" title="5-2. 순서"></a>5-2. 순서</h3><ul>
+<li><strong>Model의 Inner Class와 Standard Method의 배치 순서</strong><ol>
+<li>All database fields</li>
+<li>Custom manager attributes</li>
+<li>class Meta</li>
+<li>def __str__()</li>
+<li>def save()</li>
+<li>def get_absolute_url()</li>
+<li>Any custom methods</li>
+</ol>
+</li>
+<li><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># "class Meta" 배치 예시</span></span><br><span class="line"><span class="comment"># NO</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span><span class="params">(models.Model)</span>:</span></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Meta</span>:</span></span><br><span class="line">        verbose_name_plural = <span class="string">'people'</span></span><br><span class="line"></span><br><span class="line">    first_name = models.CharField(max_length=<span class="number">20</span>)</span><br><span class="line">    last_name = models.CharField(max_length=<span class="number">40</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># YES</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span><span class="params">(models.Model)</span>:</span></span><br><span class="line">    first_name = models.CharField(max_length=<span class="number">20</span>)</span><br><span class="line">    last_name = models.CharField(max_length=<span class="number">40</span>)</span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Meta</span>:</span></span><br><span class="line">        verbose_name_plural = <span class="string">'people'</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="5-3-Choices"><a href="#5-3-Choices" class="headerlink" title="5-3. Choices"></a>5-3. Choices</h3><ul>
+<li>Model의 Field에 choices가 있는 경우, Model Class의 Attribute로 대문자 이름의(all-uppercase) tuple의 tuple로 정의<br><div></div><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyModel</span><span class="params">(models.Model)</span>:</span></span><br><span class="line">    DIRECTION_UP = <span class="string">'U'</span></span><br><span class="line">    DIRECTION_DOWN = <span class="string">'D'</span></span><br><span class="line">    DIRECTION_CHOICES = (</span><br><span class="line">        (DIRECTION_UP, <span class="string">'Up'</span>),</span><br><span class="line">        (DIRECTION_DOWN, <span class="string">'Down'</span>),</span><br><span class="line">    )</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="6-django-conf-settings-사용"><a href="#6-django-conf-settings-사용" class="headerlink" title="6. django.conf.settings 사용"></a>6. <code>django.conf.settings</code> 사용</h2><ul>
+<li><p><code>django.conf.settings</code>에 저장된 settings를 모듈의 Top Level(모듈이 import될 때 실행됨)에서 사용하지 않음. (이유는 아래의 설명을 참고.)</p>
+<ul>
+<li><p>아래의 코드는 수동으로 settings 설정하는 코드임. (<code>DJANGO_SETTINGS_MODULE</code>에 의존하지 않는)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.conf <span class="keyword">import</span> settings</span><br><span class="line"></span><br><span class="line">settings.configure(&#123;&#125;, SOME_SETTING=<span class="string">'foo'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>settings.configure</code> Line 이전에 settings에 접근한다면 위 코드는 작동하지 않음 (settings는 <strong>LazyObject</strong>)</p>
+</li>
+<li>따라서 아래와 같은 모듈이 있다면, 이 모듈이 import될 때 settings가 구성되어 버림. 대신에 <code>django.utils.functional.LazyObject</code>, <code>django.utils.functional.lazy()</code>, <code>lambda</code>를 사용<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.conf <span class="keyword">import</span> settings</span><br><span class="line"><span class="keyword">from</span> django.urls <span class="keyword">import</span> get_callable</span><br><span class="line"></span><br><span class="line">default_foo_view = get_callable(settings.FOO_VIEW)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="7-기타"><a href="#7-기타" class="headerlink" title="7. 기타"></a>7. 기타</h2><ul>
+<li>국제화를 위해 모든 String을 (Translatable String으로) 마킹 (<a href="https://docs.djangoproject.com/en/1.11/topics/i18n/" target="_blank" rel="external">참고</a>)</li>
+<li>코드 변경 시, 더 이상 사용되지 않는 Import문 제거<ul>
+<li>flake8 사용. (남아 있어야 하는 경우 Import문의 끝에 <code>#NOQA</code> 표시)</li>
+</ul>
+</li>
+<li>마지막에 붙는 공백 제거<ul>
+<li>시각적으로 방해되거나 코드 병합 시 충돌이 발생할 수 있음</li>
+<li>IDE에서 자동으로 제거하도록 설정할 것</li>
+</ul>
+</li>
+<li>Contribute 할 때 코드에 본인의 이름을 넣지 말 것. <a href="https://github.com/django/django/blob/master/AUTHORS" target="_blank" rel="external">AUTHORS 파일</a>에 추가할 것</li>
+</ul>
+
+  </div>
+</article>
+
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+    </div>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://github.com/candypoplatte">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#목차"><span class="toc-number">1.</span> <span class="toc-text">목차</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Python-Style"><span class="toc-number">2.</span> <span class="toc-text">1. Python Style</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-PEP-8"><span class="toc-number">2.1.</span> <span class="toc-text">1-1. PEP 8</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-Indentation-들여쓰기"><span class="toc-number">2.2.</span> <span class="toc-text">1-2. Indentation (들여쓰기)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-Quote-따옴표"><span class="toc-number">2.3.</span> <span class="toc-text">1-3. Quote (따옴표)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-Comment-주석"><span class="toc-number">2.4.</span> <span class="toc-text">1-4. Comment (주석)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-Naming-이름짓기"><span class="toc-number">2.5.</span> <span class="toc-text">1-5. Naming (이름짓기)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-6-DocString"><span class="toc-number">2.6.</span> <span class="toc-text">1-6. DocString</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-7-Test"><span class="toc-number">2.7.</span> <span class="toc-text">1-7. Test</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Imports"><span class="toc-number">3.</span> <span class="toc-text">2. Imports</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-자동-Sorting"><span class="toc-number">3.1.</span> <span class="toc-text">2-1. 자동 Sorting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-작성-순서"><span class="toc-number">3.2.</span> <span class="toc-text">2-2. 작성 순서</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-Indentation-Blank-Line-들여쓰기-줄-공백"><span class="toc-number">3.3.</span> <span class="toc-text">2-3. Indentation / Blank Line (들여쓰기 / 줄 공백)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Template"><span class="toc-number">4.</span> <span class="toc-text">3. Template</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-Spaces"><span class="toc-number">4.1.</span> <span class="toc-text">3-1. Spaces</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-View"><span class="toc-number">5.</span> <span class="toc-text">4. View</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-Request-Parameter"><span class="toc-number">5.1.</span> <span class="toc-text">4-1. Request Parameter</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Model"><span class="toc-number">6.</span> <span class="toc-text">5. Model</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-Naming-이름-짓기"><span class="toc-number">6.1.</span> <span class="toc-text">5-1. Naming (이름 짓기)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-순서"><span class="toc-number">6.2.</span> <span class="toc-text">5-2. 순서</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-Choices"><span class="toc-number">6.3.</span> <span class="toc-text">5-3. Choices</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-django-conf-settings-사용"><span class="toc-number">7.</span> <span class="toc-text">6. django.conf.settings 사용</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-기타"><span class="toc-number">8.</span> <span class="toc-text">7. 기타</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://candypoplatte.github.io/2018/10/10/django_coding_style/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://candypoplatte.github.io/2018/10/10/django_coding_style/&text=Django Coding Style"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://candypoplatte.github.io/2018/10/10/django_coding_style/&title=Django Coding Style"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://candypoplatte.github.io/2018/10/10/django_coding_style/&is_video=false&description=Django Coding Style"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Django Coding Style&body=Check out this article: https://candypoplatte.github.io/2018/10/10/django_coding_style/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://candypoplatte.github.io/2018/10/10/django_coding_style/&title=Django Coding Style"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://candypoplatte.github.io/2018/10/10/django_coding_style/&title=Django Coding Style"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://candypoplatte.github.io/2018/10/10/django_coding_style/&title=Django Coding Style"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://candypoplatte.github.io/2018/10/10/django_coding_style/&title=Django Coding Style"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://candypoplatte.github.io/2018/10/10/django_coding_style/&name=Django Coding Style&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 CandyPopLatte
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://github.com/candypoplatte">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112450381-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-112450381-1');
+    </script>
+
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'candypoplatte';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+

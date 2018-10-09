@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://candypoplatte.github.io/"/>
-  <updated>2018-09-16T14:20:39.023Z</updated>
+  <updated>2018-10-09T17:11:38.876Z</updated>
   <id>https://candypoplatte.github.io/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Django Coding Style</title>
+    <link href="https://candypoplatte.github.io/2018/10/10/django_coding_style/"/>
+    <id>https://candypoplatte.github.io/2018/10/10/django_coding_style/</id>
+    <published>2018-10-09T17:04:49.354Z</published>
+    <updated>2018-10-09T17:11:38.876Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;Django 공식 문서의 &lt;a href=&quot;https://docs.djangoproject.com/en/1.11/internals/contributing/writing-code/coding-style/&quot; target=&quot;_bl
+      
+    
+    </summary>
+    
+      <category term="development" scheme="https://candypoplatte.github.io/categories/development/"/>
+    
+      <category term="python" scheme="https://candypoplatte.github.io/categories/development/python/"/>
+    
+      <category term="django" scheme="https://candypoplatte.github.io/categories/development/python/django/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>책 읽는 습관</title>
     <link href="https://candypoplatte.github.io/2018/09/15/book/"/>
     <id>https://candypoplatte.github.io/2018/09/15/book/</id>
     <published>2018-09-14T19:16:00.873Z</published>
-    <updated>2018-09-16T14:20:39.023Z</updated>
+    <updated>2018-10-09T15:02:43.503Z</updated>
     
     <summary type="html">
     
@@ -32,7 +58,7 @@
     
     </summary>
     
-      <category term="hwang" scheme="https://candypoplatte.github.io/categories/hwang/"/>
+      <category term="book" scheme="https://candypoplatte.github.io/categories/book/"/>
     
     
   </entry>
@@ -42,7 +68,7 @@
     <link href="https://candypoplatte.github.io/2018/08/20/readme/"/>
     <id>https://candypoplatte.github.io/2018/08/20/readme/</id>
     <published>2018-08-20T01:43:34.068Z</published>
-    <updated>2018-09-16T14:04:59.507Z</updated>
+    <updated>2018-10-07T15:43:05.863Z</updated>
     
     <summary type="html">
     
