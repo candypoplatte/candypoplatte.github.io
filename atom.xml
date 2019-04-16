@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://candypoplatte.github.io/"/>
-  <updated>2018-10-09T17:11:38.876Z</updated>
+  <updated>2019-04-16T17:14:32.172Z</updated>
   <id>https://candypoplatte.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>내가 원하는 팀 (2019년 4월 11일 버전)</title>
+    <link href="https://candypoplatte.github.io/2019/04/17/my-team-190411/"/>
+    <id>https://candypoplatte.github.io/2019/04/17/my-team-190411/</id>
+    <published>2019-04-16T16:26:10.803Z</published>
+    <updated>2019-04-16T17:14:32.172Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;생각의 큰 변화가 있어 글로 남긴다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;고민의-시작&quot;&gt;&lt;a href=&quot;#고민의-시작&quot; class=&quot;headerlink&quot; title=&quot;고민의 시작&quot;&gt;&lt;/a&gt;고민의 시작&lt;/h2&gt;&lt;p
+      
+    
+    </summary>
+    
+      <category term="team" scheme="https://candypoplatte.github.io/categories/team/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Django Coding Style</title>
